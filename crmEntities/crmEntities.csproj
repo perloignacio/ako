@@ -1,0 +1,96 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA2426B8-0468-4788-8085-CCB025D2CAB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>crmRules</RootNamespace>
+    <AssemblyName>crmEntities</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\crmEntities.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\crmEntities.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cooperator.Framework.Core, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CooperatorAssemblies\\Cooperator.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Auto\ContactoHistorialAcicones.Auto.cs" />
+    <Compile Include="Entities\ContactoHistorialAcicones.cs" />
+    <Compile Include="Objects\ContactoHistorialAciconesObject.cs" />
+    <Compile Include="Objects\Auto\ContactoHistorialAciconesObject.Auto.cs" />
+    <Compile Include="Entities\Contactos.cs" />
+    <Compile Include="Entities\Auto\Contactos.Auto.cs" />
+    <Compile Include="Objects\ContactosObject.cs" />
+    <Compile Include="Objects\Auto\ContactosObject.Auto.cs" />
+    <Compile Include="Entities\ContactosDirecciones.cs" />
+    <Compile Include="Entities\Auto\ContactosDirecciones.Auto.cs" />
+    <Compile Include="Objects\ContactosDireccionesObject.cs" />
+    <Compile Include="Objects\Auto\ContactosDireccionesObject.Auto.cs" />
+    <Compile Include="Entities\ContactosEstados.cs" />
+    <Compile Include="Entities\Auto\ContactosEstados.Auto.cs" />
+    <Compile Include="Objects\ContactosEstadosObject.cs" />
+    <Compile Include="Objects\Auto\ContactosEstadosObject.Auto.cs" />
+    <Compile Include="Entities\ContactosHistorialAsignaciones.cs" />
+    <Compile Include="Entities\Auto\ContactosHistorialAsignaciones.Auto.cs" />
+    <Compile Include="Objects\ContactosHistorialAsignacionesObject.cs" />
+    <Compile Include="Objects\Auto\ContactosHistorialAsignacionesObject.Auto.cs" />
+    <Compile Include="Entities\ContactosHistorialEstado.cs" />
+    <Compile Include="Entities\Auto\ContactosHistorialEstado.Auto.cs" />
+    <Compile Include="Objects\ContactosHistorialEstadoObject.cs" />
+    <Compile Include="Objects\Auto\ContactosHistorialEstadoObject.Auto.cs" />
+    <Compile Include="Entities\ContactosTipoAcciones.cs" />
+    <Compile Include="Entities\Auto\ContactosTipoAcciones.Auto.cs" />
+    <Compile Include="Objects\ContactosTipoAccionesObject.cs" />
+    <Compile Include="Objects\Auto\ContactosTipoAccionesObject.Auto.cs" />
+    <Compile Include="Entities\ContactosTipoUsuario.cs" />
+    <Compile Include="Entities\Auto\ContactosTipoUsuario.Auto.cs" />
+    <Compile Include="Objects\ContactosTipoUsuarioObject.cs" />
+    <Compile Include="Objects\Auto\ContactosTipoUsuarioObject.Auto.cs" />
+    <Compile Include="Entities\ContactoUsuarios.cs" />
+    <Compile Include="Entities\Auto\ContactoUsuarios.Auto.cs" />
+    <Compile Include="Objects\ContactoUsuariosObject.cs" />
+    <Compile Include="Objects\Auto\ContactoUsuariosObject.Auto.cs" />
+    <Compile Include="Objects\PlantillasMailObject.cs" />
+    <Compile Include="Objects\Auto\PlantillasMailObject.Auto.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

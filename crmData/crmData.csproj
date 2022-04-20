@@ -1,0 +1,116 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E60784DC-4749-4FC2-939C-C6D5005EC63B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>crmRules</RootNamespace>
+    <AssemblyName>crmData</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\crmData.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\crmData.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cooperator.Framework.Core, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CooperatorAssemblies\\Cooperator.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cooperator.Framework.Data, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CooperatorAssemblies\\Cooperator.Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Cooperator.Framework.Library, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CooperatorAssemblies\\Cooperator.Framework.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LazyProviders\DefaultLazyProvider.cs" />
+    <Compile Include="Mappers\ContactoHistorialAciconesMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactoHistorialAciconesMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactoHistorialAciconesGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactoHistorialAciconesGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosDireccionesMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosDireccionesMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosDireccionesGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosDireccionesGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosEstadosMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosEstadosMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosEstadosGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosEstadosGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosHistorialAsignacionesMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosHistorialAsignacionesMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosHistorialAsignacionesGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosHistorialAsignacionesGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosHistorialEstadoMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosHistorialEstadoMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosHistorialEstadoGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosHistorialEstadoGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosTipoAccionesMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosTipoAccionesMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosTipoAccionesGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosTipoAccionesGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosTipoUsuarioMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactosTipoUsuarioMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactosTipoUsuarioGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactosTipoUsuarioGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactoUsuariosMapper.cs" />
+    <Compile Include="Mappers\Auto\ContactoUsuariosMapper.Auto.cs" />
+    <Compile Include="Gateways\ContactoUsuariosGateway.cs" />
+    <Compile Include="Gateways\Auto\ContactoUsuariosGateway.Auto.cs" />
+    <Compile Include="Mappers\PlantillasMailMapper.cs" />
+    <Compile Include="Mappers\Auto\PlantillasMailMapper.Auto.cs" />
+    <Compile Include="Gateways\PlantillasMailGateway.cs" />
+    <Compile Include="Gateways\Auto\PlantillasMailGateway.Auto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\crmEntities\crmEntities.csproj">
+      <Project>{ba2426b8-0468-4788-8085-ccb025d2cab7}</Project>
+      <Name>
+        crmEntities
+      </Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,13 @@
+﻿.vs/crm/config/applicationhost.config
+*.suo
+API/bin
+API/obj
+Backup
+crm/.vscode
+crmData/bin
+crmData/obj
+crmEntities/bin
+crmEntities/obj
+crmRules/bin
+crmRules/obj
+packages
