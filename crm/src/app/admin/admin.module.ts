@@ -43,7 +43,7 @@ import { EstadosFormComponent } from './components/estados-form/estados-form.com
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCg8BmxqFCCKSEdoT7JQXXM5zDHqrIkx0g',
+      apiKey: '',
       libraries: ['places']
     })
   ],providers:[

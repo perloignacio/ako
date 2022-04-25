@@ -11,3 +11,4 @@ crmEntities/obj
 crmRules/bin
 crmRules/obj
 packages
+crm/keys.json
