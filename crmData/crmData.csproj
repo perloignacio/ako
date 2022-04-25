@@ -62,7 +62,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gateways\Auto\ContactosOrigenGateway.Auto.cs" />
+    <Compile Include="Gateways\ContactosOrigenGateway.cs" />
     <Compile Include="LazyProviders\DefaultLazyProvider.cs" />
+    <Compile Include="Mappers\Auto\ContactosOrigenMapper.Auto.cs" />
     <Compile Include="Mappers\ContactoHistorialAciconesMapper.cs" />
     <Compile Include="Mappers\Auto\ContactoHistorialAciconesMapper.Auto.cs" />
     <Compile Include="Gateways\ContactoHistorialAciconesGateway.cs" />
@@ -87,6 +90,7 @@
     <Compile Include="Mappers\Auto\ContactosHistorialEstadoMapper.Auto.cs" />
     <Compile Include="Gateways\ContactosHistorialEstadoGateway.cs" />
     <Compile Include="Gateways\Auto\ContactosHistorialEstadoGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosOrigenMapper.cs" />
     <Compile Include="Mappers\ContactosTipoAccionesMapper.cs" />
     <Compile Include="Mappers\Auto\ContactosTipoAccionesMapper.Auto.cs" />
     <Compile Include="Gateways\ContactosTipoAccionesGateway.cs" />

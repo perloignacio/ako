@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using Cooperator.Framework.Core.Exceptions;
 
 namespace crmRules.Entities
@@ -19,6 +20,11 @@ namespace crmRules.Entities
     public partial class Contactos
         // : IValidable
     {
+        public List<ContactosHistorialEstado> Estados { get; set; }
+        public List<ContactosHistorialAsignaciones> Asignaciones { get; set; }
+        public List<ContactosDirecciones> Direcciones { get; set; }
+        public List<ContactoHistorialAcicones> Acciones { get; set; }
+
         // /// <summary>
         // /// When IValidable is implemented, this method is invoked by Gateway before Insert or Update to validate Object.
         // /// </summary>

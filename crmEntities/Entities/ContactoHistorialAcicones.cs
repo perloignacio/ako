@@ -19,6 +19,7 @@ namespace crmRules.Entities
     public partial class ContactoHistorialAcicones
         // : IValidable
     {
+        public int IdObjeto { get; set; }
         // /// <summary>
         // /// When IValidable is implemented, this method is invoked by Gateway before Insert or Update to validate Object.
         // /// </summary>

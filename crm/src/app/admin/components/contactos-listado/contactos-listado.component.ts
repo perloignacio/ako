@@ -16,7 +16,7 @@ export class ContactosListadoComponent implements OnInit {
   ArrObj:Contactos[]=[];
   base=environment.assets;
   page = 1;
-  pageSize = 4;
+  pageSize = 10;
   collectionSize = 0
   OriginalArr:Contactos[]=[];
   strFiltro="";
@@ -106,14 +106,6 @@ export class ContactosListadoComponent implements OnInit {
     this.router.navigate(['admin/contactosForm']);
   }
 
-  Asignar(obj:Contactos){
-    this.srvShared.Contacto=obj;
-    //this.router.navigate(['admin/estadoCuenta']);
-  }
-
-  Comentarios(obj:Contactos){
-    this.srvShared.Contacto=obj;
-    //this.router.navigate(['admin/comentariosForm']);
-  }
+  
 
 }

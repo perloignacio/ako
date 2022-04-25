@@ -41,5 +41,22 @@ namespace API.Controllers
             }
 
         }
+
+        [Route("activos")]
+        [HttpGet]
+        [AllowAnonymous]
+        public IHttpActionResult activos()
+        {
+            try
+            {
+                return Ok(ContactoUsuariosMapper.Instance().GetAll().Where(t => t.Activo).OrderBy(t => t.Apellido));
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+        }
     }
 }

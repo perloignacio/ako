@@ -54,7 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Auto\ContactoHistorialAcicones.Auto.cs" />
+    <Compile Include="Entities\Auto\ContactosOrigen.Auto.cs" />
     <Compile Include="Entities\ContactoHistorialAcicones.cs" />
+    <Compile Include="Entities\ContactosOrigen.cs" />
+    <Compile Include="Objects\Auto\ContactosOrigenObject.Auto.cs" />
     <Compile Include="Objects\ContactoHistorialAciconesObject.cs" />
     <Compile Include="Objects\Auto\ContactoHistorialAciconesObject.Auto.cs" />
     <Compile Include="Entities\Contactos.cs" />
@@ -79,6 +82,7 @@
     <Compile Include="Objects\Auto\ContactosHistorialEstadoObject.Auto.cs" />
     <Compile Include="Entities\ContactosTipoAcciones.cs" />
     <Compile Include="Entities\Auto\ContactosTipoAcciones.Auto.cs" />
+    <Compile Include="Objects\ContactosOrigenObject.cs" />
     <Compile Include="Objects\ContactosTipoAccionesObject.cs" />
     <Compile Include="Objects\Auto\ContactosTipoAccionesObject.Auto.cs" />
     <Compile Include="Entities\ContactosTipoUsuario.cs" />

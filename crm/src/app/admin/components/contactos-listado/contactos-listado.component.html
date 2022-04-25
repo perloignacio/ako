@@ -22,11 +22,11 @@
   <div class="main-card mb-3 card">
     <div class="card-header">
       <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-8">
             Contactos
           </div>
-          <div class="col-md-6">
-              <input type="text" [(ngModel)]="strFiltro" (keyup)="Filtro()">
+          <div class="col-md-4 text-right">
+              <input type="text" class="form-control" placeholder="Filtro" [(ngModel)]="strFiltro" (keyup)="Filtro()">
           </div>
       </div>
     </div>
@@ -54,15 +54,14 @@
           
           <td>{{obj.Email}}</td>
           <td>{{obj.Telefono}}</td>
-          <td>{{obj.Whatsapp}}</td>
+          <td><a href="https://wa.me/{{obj.Whatsapp}}" target="_blank">{{obj.Whatsapp}}</a></td>
           <td class="text-center">{{obj.Activo ? 'Si':'NO'}}</td>
           <td class="text-center">
   
-            <i class="fas fa-trash mr-2" role="button" (click)="Borrar(obj)" *ngIf="this.obj.Activo"></i>
-            <i class="fas fa-check mr-2" role="button" (click)="Activar(obj)" *ngIf="!this.obj.Activo"></i>
-            <i class="fas fa-edit mr-2" role="button" (click)="Editar(obj)"></i>
-            <i class="fas fa-user-plus mr-2" role="button" (click)="Asignar(obj)"></i>
-            <i class="fas fa-comments" role="button" (click)="Comentarios(obj)"></i>
+            <i class="fas fa-trash me-2" role="button" (click)="Borrar(obj)" *ngIf="this.obj.Activo"></i>
+            <i class="fas fa-check me-2" role="button" (click)="Activar(obj)" *ngIf="!this.obj.Activo"></i>
+            <i class="fas fa-edit me-2" role="button" (click)="Editar(obj)"></i>
+           
   
           </td>
         </tr>
