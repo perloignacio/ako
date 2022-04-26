@@ -1,12 +1,106 @@
 
 <div class="fondo">
   <div class="container">
-    <div class="logo"><img src="assets/logo.svg"></div>
-    <div class="card">
+    <div class="logo"><img src="assets/logo.png"></div>
+    <div class="card" >
       <h3>Porcentaje de Inactivacion de Glifosato</h3>
-      <div class="campo">
-        <label>Volumen de agua (Lt./ha.)</label>
-        <input type="text" class="txt">
+      <div class="ingreso" *ngIf="this.ingrsoglif">
+        <div class="col">
+          <div class="campo">
+            <label>Volumen de agua (Lt./ha.)</label>
+            <input type="number" [(ngModel)]="glifo.volumen" class="txt">
+          </div>
+          <div class="campo">
+            <label>Dureza (ppm)</label>
+            <input type="number" [(ngModel)]="glifo.dureza" class="txt">
+          </div>
+        </div>
+        <div class="col">
+          <div class="campo">
+            <label>Costo  Herbicida</label>
+            <input type="number" [(ngModel)]="glifo.costo" class="txt">
+          </div>
+          <div class="campo">
+            <label>Dosis por ha. 3 lt.</label>
+            <input type="number" [(ngModel)]="glifo.dosis" class="txt">
+          </div>
+        </div>
+        <button class="btn btngreen" (click)="CalularGli()" role="button">Calcular</button>
+      </div>
+      <div class="ingreso" *ngIf="!this.ingrsoglif">
+        <div class="resultado">
+          <h4>Porcentaje de inactivacion.</h4>
+          <div class="valor">{{glifo.porinactivacion}}</div>
+        </div>
+        <div class="resultado">
+          <h4>valorizacion de inactivacion</h4>
+          <div class="valor">{{glifo.valinactivacion | currency}}</div>
+        </div>
+        <div class="resultado">
+          <h4>Perdida Economica total por ha.</h4>
+          <div class="valor">{{glifo.perdida | currency}}</div>
+        </div>
+        <button class="btn btnceleste" (click)="OtroGli()" role="button">Otro cálaculo</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Costo de Dosis por Correccion</h3>
+      <div class="ingreso" *ngIf="this.ingrsogcorr">
+        <div class="col">
+          <div class="campo">
+            <label>Volumen de agua (Lt./ha.)</label>
+            <input type="number" [(ngModel)]="corre.volumen" class="txt">
+          </div>
+          <div class="campo">
+            <label>Litros por ha aplicados</label>
+            <input type="number" [(ngModel)]="corre.litros" class="txt">
+          </div>
+          
+        </div>
+        <div class="col">
+          <div class="campo">
+            <label>Costo Eco Potent Plus</label>
+            <input type="number" [(ngModel)]="corre.costoeco" class="txt">
+          </div>
+          <div class="campo">
+            <label>Cantidad Has establecimiento</label>
+            <input type="number" [(ngModel)]="corre.hectareas" class="txt">
+          </div>
+          <div class="campo">
+            <label>Cantidad Aplicaciones</label>
+            <input type="number" [(ngModel)]="corre.cantidad" class="txt">
+          </div>
+        </div>
+        
+        <button class="btn btngreen" (click)="CalularCorr()" role="button">Calcular</button>
+      </div>
+      <div class="ingreso" *ngIf="!this.ingrsogcorr">
+        <div class="resultado grande">
+          <h4>Cantidad de hectareas</h4>
+          <div class="valor">{{corre.canthec}}</div>
+        </div>
+        <div class="resultado grande">
+          <h4>Costo Final por hectareas </h4>
+          <div class="valor">{{corre.costohec | currency}}</div>
+        </div>
+        <button class="btn btnceleste" (click)="OtroCorr()" role="button">Otro cálaculo</button>
+      </div>
+    </div>
+
+    <div class="card"  *ngIf="this.resultadofinal">
+      <h3>Costes Establecimiento</h3>
+      <img src="assets/load.gif" *ngIf="this.loading">
+      <div class="ingreso" *ngIf="!this.loading">
+        <div class="resultado grande verde">
+          <h4>Costo Total Establecimiento</h4>
+          <div class="valor">{{totalesta | currency}}</div>
+        </div>
+        <div class="resultado grande verde">
+          <h4>Costo Total Aplicacion AKO</h4>
+          <div class="valor">{{totalako | currency}}</div>
+        </div>
+        <button class="btn btnceleste" (click)="nuevo()" role="button">Otro cálaculo</button>
       </div>
     </div>
   </div>

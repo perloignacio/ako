@@ -12,3 +12,5 @@ crmRules/bin
 crmRules/obj
 packages
 crm/keys.json
+.github/workflows/firebase-hosting-pull-request.yml
+app/.firebase
