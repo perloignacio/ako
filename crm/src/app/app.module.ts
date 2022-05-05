@@ -26,7 +26,7 @@ import { JwtInterceptor } from './helpers/jwt.interseptor';
     BrowserAnimationsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCg8BmxqFCCKSEdoT7JQXXM5zDHqrIkx0g',
+      apiKey: 'xxx',
       libraries: ['places']
     })
   ],

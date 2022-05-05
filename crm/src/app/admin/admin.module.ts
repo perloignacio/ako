@@ -58,7 +58,7 @@ import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.
       useFactory: adapterFactory,
     }),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCg8BmxqFCCKSEdoT7JQXXM5zDHqrIkx0g',
+      apiKey: 'xxx',
       libraries: ['places']
     })
   ],providers:[
