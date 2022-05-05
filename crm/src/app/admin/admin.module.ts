@@ -16,6 +16,12 @@ import { DireccionesFormComponent } from './components/direcciones-form/direccio
 import { AccionesFormComponent } from './components/acciones-form/acciones-form.component';
 import { AsignacionesFormComponent } from './components/asignaciones-form/asignaciones-form.component';
 import { EstadosFormComponent } from './components/estados-form/estados-form.component';
+import { AgendaFormComponent } from './components/agenda-form/agenda-form.component';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { AgendaListadoComponent } from './components/agenda-listado/agenda-listado.component';
+import { UsuariosListadoComponent } from './components/usuarios-listado/usuarios-listado.component';
+import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.component';
 
 
 @NgModule({
@@ -30,6 +36,10 @@ import { EstadosFormComponent } from './components/estados-form/estados-form.com
     AccionesFormComponent,
     AsignacionesFormComponent,
     EstadosFormComponent,
+    AgendaFormComponent,
+    AgendaListadoComponent,
+    UsuariosListadoComponent,
+    UsuariosFormComponent,
   ],
   exports:[
     MainComponent
@@ -42,8 +52,13 @@ import { EstadosFormComponent } from './components/estados-form/estados-form.com
     PerfectScrollbarModule,
     FormsModule,
     ReactiveFormsModule,
+    
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
     AgmCoreModule.forRoot({
-      apiKey: '',
+      apiKey: 'AIzaSyCg8BmxqFCCKSEdoT7JQXXM5zDHqrIkx0g',
       libraries: ['places']
     })
   ],providers:[

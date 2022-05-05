@@ -17,6 +17,7 @@ export class AccionesFormComponent implements OnInit {
     this.srvAcciones.tipos().subscribe((l)=>{
       if(this.srvShared.objModal as Acciones!=null){
         this.obj=this.srvShared.objModal;
+        
       }
       this.TipoAcciones=l;
     })
@@ -28,7 +29,7 @@ export class AccionesFormComponent implements OnInit {
     
     this.obj.ContactosTipoAccionesEntity=this.TipoAcciones.find((t)=>t.IdTipoAccionContacto==this.obj.IdTipoAccion)
     //To-do:Cambiar por el que esta logueado
-    this.obj.ContactoUsuariosEntity={"IdUsuario":1,"Nombre":"Ignacio ","Apellido":"Perlo","Email":"Perloignacio@gmail.com","IdTipoUsuario":1,"Usuario":"ignacio","Contra":"perlo","Activo":true,"Token":""}
+    this.obj.ContactoUsuariosEntity={"IdUsuario":1,"Nombre":"Ignacio ","Apellido":"Perlo","Email":"Perloignacio@gmail.com","IdTipoUsuario":1,"Usuario":"ignacio","Contra":"perlo","Activo":true,"Token":"","Telefono":"","ContactosTipoUsuarioEntity":null}
     this.obj.IdUsuario=this.obj.ContactoUsuariosEntity.IdUsuario;
     this.activeModal.close(this.obj);
   }

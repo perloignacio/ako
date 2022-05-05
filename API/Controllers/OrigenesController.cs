@@ -12,9 +12,9 @@ namespace API.Controllers
     [RoutePrefix("origenes")]
     public class OrigenesController : ApiController
     {
-        [Route("tipos")]
+        [Route("Admin/tipos")]
         [HttpGet]
-        [AllowAnonymous]
+        
         public IHttpActionResult tipos()
         {
             try

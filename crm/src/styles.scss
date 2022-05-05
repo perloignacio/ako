@@ -3,5 +3,8 @@
 /* Importing Bootstrap SCSS file. */
 @import "assets/base";
 @import '~bootstrap/scss/bootstrap';
-
+@import '~bs-stepper/dist/css/bs-stepper.min.css';
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 .pac-container{z-index: 1000000 !important;}
+.home{background-image: url('assets/bg3.jpg');background-size: cover;min-height: 100vh;}
+.cal-open-day-events{background-color: #fff !important;box-shadow:none;color:#000 !important;}

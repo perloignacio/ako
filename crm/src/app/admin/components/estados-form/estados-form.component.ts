@@ -30,7 +30,7 @@ export class EstadosFormComponent implements OnInit {
     this.obj.ContactosEstadosEntity=this.Estados.find((t)=>t.IdEstadoContacto==this.obj.IdEstadoContacto)
     
     //To-do:Cambiar por el que esta logueado
-    this.obj.ContactoUsuariosEntity={"IdUsuario":1,"Nombre":"Ignacio ","Apellido":"Perlo","Email":"Perloignacio@gmail.com","IdTipoUsuario":1,"Usuario":"ignacio","Contra":"perlo","Activo":true,"Token":""}
+    this.obj.ContactoUsuariosEntity={"IdUsuario":1,"Nombre":"Ignacio ","Apellido":"Perlo","Email":"Perloignacio@gmail.com","IdTipoUsuario":1,"Usuario":"ignacio","Contra":"perlo","Activo":true,"Token":"","Telefono":"","ContactosTipoUsuarioEntity":null}
     this.obj.IdUsuarioContacto=this.obj.ContactoUsuariosEntity.IdUsuario;
     this.activeModal.close(this.obj);
   }

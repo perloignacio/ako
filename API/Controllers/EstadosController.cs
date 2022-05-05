@@ -12,9 +12,9 @@ namespace API.Controllers
     [RoutePrefix("estados")]
     public class EstadosController : ApiController
     {
-        [Route("tipos")]
+        [Route("Admin/tipos")]
         [HttpGet]
-        [AllowAnonymous]
+        
         public IHttpActionResult tipos()
         {
             try

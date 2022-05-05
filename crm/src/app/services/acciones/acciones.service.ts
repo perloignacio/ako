@@ -10,7 +10,7 @@ export class AccionesService {
 
   endpoint = "";
   constructor(private http: HttpClient) {
-    this.endpoint = environment.apiUrl+"acciones/";
+    this.endpoint = environment.apiUrl+"acciones/Admin/";
   }
 
   tipos() {

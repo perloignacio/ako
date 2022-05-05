@@ -1,0 +1,121 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="normal">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <!--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+
+
+</head>
+
+<body>
+
+    <table width="650" style="font-family: 'Open Sans','Roboto','Segoe UI','Arial','sans-serif';">
+        <tr>
+            <td style="padding: 30px 0px;border-bottom: 1px solid #303030;text-align: center;">
+                <img src="{ubicacionlogo}" width="215" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; border-bottom: 1px solid #303030">
+                <p style="font-size: 20px;line-height: 40px;font-weight: 800;color:#303030"><b>¡Hola {nombre}!</b></p>
+                <p style="font-size: 20px;line-height: 40px;font-weight: 800;color:#303030"><b>¡Gracias por confiar en nosotros!</b></p>
+                <p style="padding: 0 100px;font-size: 16px;font-weight: 300;color:#303030">
+                    A continuación verás las ventajas de aplicar AKO en tus cultivos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Porcentaje de Inactivacion de Glifosato</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="650">
+                    <tr>
+                        <td><b>Volumen de agua (Lt./ha.)</b>: {gli_volumen}</td>
+                        <td><b>Dureza (ppm)</b>: {gli_dureza}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Costo Herbicida</b>: {gli_costo}</td>
+                        <td><b>Dosis por ha. 3 lt.</b>: {gli_dosis}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="650">
+                    <tr>
+                        <td style="font-size:16px;font-weight:700;text-align:center"><b>Porcentaje de inactivación.</b><br /> {gli_porinactivacion}</td>
+                        <td style="font-size:16px;font-weight:700;text-align:center"><b>Valorización de inactivación</b><br /> {gli_valinactivacion}</td>
+                        <td style="font-size:16px;font-weight:700;text-align:center"><b>Perdida Economica total por ha.</b><br /> {gli_perdida}</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1px solid #303030">></td>
+        </tr>
+        <tr>
+            <td><h3>Costo de Dosis por Correccion</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="650">
+                    <tr>
+                        <td><b>VVolumen de agua (Lt./ha.)</b>: {corr_volumen}</td>
+                        <td><b>Litros por ha aplicados</b>: {corr_litros}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Costo Eco Potent Plus</b>: {corr_costoeko}</td>
+                        <td><b>Cantidad Has establecimiento</b>: {corr_hectareas}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Cantidad Aplicaciones</b>: {corr_cantidad}</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="650">
+                    <tr>
+                        <td style="font-size:16px;font-weight:700;text-align:center"><b>Cantidad de hectareas.</b><br /> {corr_canthec}</td>
+                        <td style="font-size:16px;font-weight:700;text-align:center"><b>Costo Final por hectareas </b><br /> {corr_costohec}</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1px solid #303030">></td>
+        </tr>
+        <tr>
+            <td align="right"><b><span style="font-size: 18px;">Costo Total Establecimiento {costoesta}.-</span></b></td>
+        </tr>
+        <tr>
+            <td align="right"><b><span style="font-size: 18px;">Costo Total Establecimiento {costoako}.-</span></b></td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1px solid #303030">></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <p style="padding: 0 100px;font-size: 16px;font-weight: 300;color:#303030;margin-top: 5px;">
+                    Si tienes alguna duda, por favor escríbenos a
+                    <a href="mailto:{email_contacto}">{email_contacto}</a><br />
+
+                </p>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

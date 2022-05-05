@@ -10,14 +10,14 @@ export class ContactosService {
 
   endpoint = "";
   constructor(private http: HttpClient) {
-    this.endpoint = environment.apiUrl+"contactos/";
+    this.endpoint = environment.apiUrl+"contactos/Admin/";
   }
 
   todosAdmin() {
     return this.http.get<Contactos[]>(this.endpoint+'todosAdmin');
   }
   todoActivos() {
-    return this.http.get<Contactos[]>(this.endpoint+'todoActivos');
+    return this.http.get<Contactos[]>(this.endpoint+'todosActivos');
   }
 
   Borrar(id:number) {

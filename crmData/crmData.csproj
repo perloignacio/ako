@@ -62,14 +62,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gateways\AgendaGateway.cs" />
+    <Compile Include="Gateways\Auto\AgendaGateway.Auto.cs" />
+    <Compile Include="Gateways\Auto\ContactosConsultasGateway.Auto.cs" />
     <Compile Include="Gateways\Auto\ContactosOrigenGateway.Auto.cs" />
+    <Compile Include="Gateways\ContactosConsultasGateway.cs" />
     <Compile Include="Gateways\ContactosOrigenGateway.cs" />
     <Compile Include="LazyProviders\DefaultLazyProvider.cs" />
+    <Compile Include="Mappers\AgendaMapper.cs" />
+    <Compile Include="Mappers\Auto\AgendaMapper.Auto.cs" />
+    <Compile Include="Mappers\Auto\ContactosConsultasMapper.Auto.cs" />
     <Compile Include="Mappers\Auto\ContactosOrigenMapper.Auto.cs" />
     <Compile Include="Mappers\ContactoHistorialAciconesMapper.cs" />
     <Compile Include="Mappers\Auto\ContactoHistorialAciconesMapper.Auto.cs" />
     <Compile Include="Gateways\ContactoHistorialAciconesGateway.cs" />
     <Compile Include="Gateways\Auto\ContactoHistorialAciconesGateway.Auto.cs" />
+    <Compile Include="Mappers\ContactosConsultasMapper.cs" />
     <Compile Include="Mappers\ContactosMapper.cs" />
     <Compile Include="Mappers\Auto\ContactosMapper.Auto.cs" />
     <Compile Include="Gateways\ContactosGateway.cs" />

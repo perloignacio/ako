@@ -10,7 +10,7 @@ export class EstadosService {
 
   endpoint = "";
   constructor(private http: HttpClient) {
-    this.endpoint = environment.apiUrl+"estados/";
+    this.endpoint = environment.apiUrl+"estados/Admin/";
   }
 
   tipos() {

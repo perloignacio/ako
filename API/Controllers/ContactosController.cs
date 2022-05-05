@@ -16,9 +16,9 @@ namespace API.Controllers
     [RoutePrefix("contactos")]
     public class ContactosController : ApiController
     {
-        [Route("todosAdmin")]
+        [Route("Admin/todosAdmin")]
         [HttpGet]
-        [AllowAnonymous]
+        
         public IHttpActionResult todosAdmin()
         {
             try
@@ -41,9 +41,35 @@ namespace API.Controllers
 
         }
 
+        [Route("Admin/todosActivos")]
+        [HttpGet]
+       
+        public IHttpActionResult todosActivos()
+        {
+            try
+            {
+                ContactosList lista = ContactosMapper.Instance().GetAll();
+                foreach (var item in lista)
+                {
+                    
+                    item.Acciones = ContactoHistorialAciconesMapper.Instance().GetByContactos(item.IdContacto);
+                    item.Direcciones = ContactosDireccionesMapper.Instance().GetByContactos(item.IdContacto);
+                    item.Estados = ContactosHistorialEstadoMapper.Instance().GetByContactos(item.IdContacto);
+                    item.Asignaciones = ContactosHistorialAsignacionesMapper.Instance().GetByContactos(item.IdContacto);
+                }
+                return Ok(lista.Where(c=>c.Activo));
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+        }
+
         [Route("Admin/Borrar")]
         [HttpGet]
-        [AllowAnonymous]
+        
         public IHttpActionResult Borrar(int id)
         {
             try
@@ -62,7 +88,7 @@ namespace API.Controllers
 
         [Route("Admin/Activar")]
         [HttpGet]
-        [AllowAnonymous]
+        
         public IHttpActionResult Activar(int id)
         {
             try
@@ -79,9 +105,9 @@ namespace API.Controllers
 
         }
 
-        [Route("AgregarEditar")]
+        [Route("Admin/AgregarEditar")]
         [HttpPost]
-        [AllowAnonymous]
+        
         public IHttpActionResult AgregarEditar()
         {
             try

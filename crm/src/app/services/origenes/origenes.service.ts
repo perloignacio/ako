@@ -10,7 +10,7 @@ export class OrigenesService {
 
   endpoint = "";
   constructor(private http: HttpClient) {
-    this.endpoint = environment.apiUrl+"origenes/";
+    this.endpoint = environment.apiUrl+"origenes/Admin/";
   }
 
   tipos() {

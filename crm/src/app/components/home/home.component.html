@@ -1,1 +1,177 @@
-<p>home works!</p>
+<div class="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="stepper1" class="bs-stepper ">
+                    <div class="bs-stepper-header mb-5">
+                      <div class="step" data-target="#test-l-1">
+                        <button class="step-trigger">
+                          <span class="bs-stepper-circle">1</span>
+                          <span class="bs-stepper-label">Información</span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step" data-target="#test-l-2">
+                        <button class="step-trigger" >
+                          <span class="bs-stepper-circle">2</span>
+                          <span class="bs-stepper-label">Sus datos</span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step" data-target="#test-l-3">
+                        <button class="step-trigger" >
+                          <span class="bs-stepper-circle">3</span>
+                          <span class="bs-stepper-label">Resultados</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="bs-stepper-content">
+                      <form>
+                        <div id="test-l-1" class="content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card shadow p-3 h-100" >
+                                        <h3 class="text-center mb-4 mt-3">Porcentaje de Inactivacion de Glifosato</h3>
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                              <label>Volumen de agua (Lt./ha.)</label>
+                                              <input type="number" [(ngModel)]="glifo.volumen" name="volumen" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                              <label>Dureza (ppm)</label>
+                                              <input type="number" [(ngModel)]="glifo.dureza" name="dureza" class="form-control">
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                              <label>Costo  Herbicida</label>
+                                              <input type="number" [(ngModel)]="glifo.costo" name="costo" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                              <label>Dosis por ha. 3 lt.</label>
+                                              <input type="number" [(ngModel)]="glifo.dosis" name="dosis" class="form-control">
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card shadow p-3 h-100">
+                                        <h3 class="text-center mb-4 mt-3">Costo de Dosis por Correccion</h3>
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                              <label>Volumen de agua (Lt./ha.)</label>
+                                              <input type="number" [(ngModel)]="corre.volumen" name="volumen2" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                              <label>Litros por ha aplicados</label>
+                                              <input type="number" [(ngModel)]="corre.litros" name="litros" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                                <label>Cantidad Aplicaciones</label>
+                                                <input type="number" [(ngModel)]="corre.cantidad" name="cantidad" class="form-control">
+                                              </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                              <label>Costo Eco Potent Plus</label>
+                                              <input type="number" [(ngModel)]="corre.costoeco" name="costoeco" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                              <label>Cantidad Has establecimiento</label>
+                                              <input type="number" [(ngModel)]="corre.hectareas" name="hectareas" class="form-control">
+                                            </div>
+                                            
+                                          </div>
+                                          
+                                          
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button (click)="paso1()" class="btn btn-primary mt-3 ">Siguiente</button>
+                            </div>
+                            
+                        </div>
+                        <div id="test-l-2" class="content">
+                            <div class="card shadow p-3 h-100" *ngIf="InformacionCargada">
+                                <h3 class="text-center mb-4 mt-3">Indique sus datos</h3>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                                <label>Nombre</label>
+                                                <input [(ngModel)]="usu.Nombre" name="nombre" type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                                <label>Email</label>
+                                                <input [(ngModel)]="usu.Email" name="email" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                                <label>Apellido</label>
+                                                <input [(ngModel)]="usu.Apellido" name="Apellido" type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                                <label>Whatsapp</label>
+                                                <input [(ngModel)]="usu.Whatsapp" name="Whatsapp" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label>Dirección</label>
+                                            <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Ingrese su dirección" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group mt-3">
+                                        <agm-map #agmMap [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" class="mt-5">
+                                        <agm-marker [latitude]="latitude" (dragEnd)="markerDragEnd($event)" [longitude]="longitude" [markerDraggable]="true"
+                                            ></agm-marker>
+                                        </agm-map>
+                                    </div>  
+                                      
+                                    <h5>Dirección: {{address}}</h5>
+                                    <div>Latitud: {{latitude}}</div>
+                                    <div>Longitud: {{longitude}}</div>
+                                    
+                                  </div>
+                                  
+                                  
+                                </div>
+                            </div>
+                            <div class="card shadow p-3 h-100 text-center" *ngIf="!InformacionCargada">
+                                <h2 cl>Complete los datos</h2>
+                                <small> Para obtener los resultados complete la información del paso 1</small>
+                            </div>
+                            <div class="text-end">
+                                <button (click)="paso2()" class="btn btn-primary mt-3" *ngIf="InformacionCargada">Obtener resultados</button>
+                            </div>
+                        </div>
+                        <div id="test-l-3" class="content text-center">
+                            <div class="card shadow p-3 h-100" *ngIf="this.enviado">
+                                <h2>Muchas gracias, va a recibir un correo con los resultados</h2>
+                                <small> Por favor verifique el correo no deseado</small>
+                            </div>
+                            <div class="card shadow p-3 h-100" *ngIf="!this.enviado">
+                                <h2>Complete los datos</h2>
+                                <small> Para obtener los resultados complete la información del paso 1 y 2</small>
+                            </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

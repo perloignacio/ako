@@ -12,9 +12,9 @@ namespace API.Controllers
     [RoutePrefix("acciones")]
     public class AccionesController : ApiController
     {
-        [Route("tipos")]
+        [Route("Admin/tipos")]
         [HttpGet]
-        [AllowAnonymous]
+        
         public IHttpActionResult tipos()
         {
             try

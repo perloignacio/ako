@@ -1,0 +1,66 @@
+
+
+<div class="modal-header">
+    
+</div>
+<div class="modal-body">
+    <div class="card p-3" *ngIf="this.obj!=null">
+        <form>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="position-relative form-group">
+                        <label for="exampleInputUsername1">Contacto</label>
+                        <select [(ngModel)]="obj.IdContacto" name="IdTipoAccion" class="form-select form-control">
+                            <option  [ngValue]="null">Sin contacto</option>
+                            <option *ngFor="let objC of Contactos"  [ngValue]="objC.IdContacto">{{objC.Apellido}} {{objC.Nombre}}</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+            <div class="position-relative form-group">
+                <label for="exampleInputUsername1">Fecha desde</label>
+                <input [(ngModel)]="obj.FechaDesde" name="desde" type="datetime-local" class="form-control">
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="position-relative form-group">
+                <label for="exampleInputUsername1">Fecha hasta</label>
+                <input [(ngModel)]="obj.FechaHasta" name="hasta" type="datetime-local" class="form-control">
+            </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+            <div class="position-relative form-group">
+                <label for="exampleInputUsername1">Asunto</label>
+                <input [(ngModel)]="obj.Asunto" name="asunto" type="text" class="form-control">
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="position-relative form-group">
+                <label for="exampleInputUsername1">Link</label>
+                <input [(ngModel)]="obj.Link" name="Link" type="text" class="form-control">
+            </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+            <div class="position-relative form-group">
+                <label for="exampleInputUsername1">Comentarios</label>
+                <textarea [(ngModel)]="obj.Descripcion" class="form-control" name="comentarios"></textarea>
+                
+            </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <button class="mt-3 btn btn-success mb-3" (click)="Guardar()">Guardar cambios</button>        
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
