@@ -1,0 +1,173 @@
+{
+    "prods":[
+    {
+        "Nombre":"Eco Potent Plus",
+        "Descripcion":"COADYUVANTE CORRECTOR DE pH SECUESTRANTE DE CATIONES. Es un producto desarrollado específicamente para:Tratar y acondicionar aguas de distintas calidades destinadas a aplicaciones agrícolas.",
+        "Icono":"AKO_LogotipoCoadyuvantes-10-1024x432.png",
+        "Ficha":"ECOPOTENTPLUS_ft.pdf",
+        "Tipo":"coadyuvantes"
+    },
+    {
+        "Nombre":"Eco Twister Plus",
+        "Descripcion":"COADYUVANTE ANTIDERIVA. Ha sido formulado para disminuir las pérdidas producidas por deriva, contribuyendo en la optimización de las aplicaciones de fitosanitarios. Otorga mayor peso específico a las gotas reduciendo el riesgo de deriva en aplicaciones aéreas y terrestres. Minimiza las pérdidas por evaporación dando uniformidad al tratamiento.",
+        "Icono":"AKO_LogotipoCoadyuvantes-11-1024x432.png",
+        "Ficha":"ECOTWISTERPLUS_ft.pdf",
+        "Tipo":"coadyuvantes"
+    },
+    {
+        "Nombre":"Partner Max",
+        "Descripcion":"Coadyuvante formulado para disminuir las pérdidasproducidas por factores climáticos. PARTNER MAX es un Coadyuvanteformulado para disminuir las pérdidasproducidas por factores climáticosy propiosdelas aplicaciones agrícolas, contribuyendo en el mejor aprovechamiento de las pulverizaciones. Otorga mayor peso específicoa las gotas por lo que es aconsejable utilizarlo en fumigaciones aéreas y terrestres. Minimiza las perdidas por evaporación dando uniformidad a la aplicación.",
+        "Icono":"AKO_LogotipoCoadyuvantes-12-1024x432.png",
+        "Ficha":"PARTNERMAX_ft.pdf",
+        "Tipo":"coadyuvantes"
+    },
+    {
+        "Nombre":"Ako Optimum",
+        "Descripcion":"coadyuvante compatibilizador de mezclas detanque para pulverizaciones. Esta formulado para utilizarse en preparaciones donde se generan incompatibilidades físico químicas de plaguicidas, que generan formación de grumos, cremas o cristales poco emulsionables perjudican el preparado a pulverizar. ",
+        "Icono":"AKO_LogotipoCoadyuvantes-13-1024x432.png",
+        "Ficha":"AKOOPTIMUM_ft.pdf",
+        "Tipo":"coadyuvantes"
+    },
+    {
+        "Nombre":"Ako Oli Met",
+        "Descripcion":"Aceite de soja, metil ésteres 78% Poli(dimetilsiloxano)",
+        "Icono":"AKO_LogotipoCoadyuvantes-14-1024x432.png",
+        "Ficha":"",
+        "Tipo":"coadyuvantes"
+    },
+    {
+        "Nombre":"Nitro Nutri Plus",
+        "Descripcion":"Contiene Nitrógeno y Calcio totalmente solubles. El aporte de estos elementos en una proporción equilibrada apunta al crecimiento.",
+        "Icono":"AKO_LogotipoFertilizantes-98-15-1024x432.png",
+        "Ficha":"NITRO-NUTRI-PLUS-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Nutri Plus Cab",
+        "Descripcion":"fertilizante foliar de última tecnología formulado específicamente para la nutrición de cultivos intensivos y extensivos. Nutri Plus CaB proporciona en su formulación liquida Calcio y Boro complementado con macro y micronutrientes quelatizados en forma balanceada y efectiva.",
+        "Icono":"AKO_LogotipoFertilizantes-98-11-1024x432.png",
+        "Ficha":"NUTRI-PLUS-CAB-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Nutri Plus Zinc",
+        "Descripcion":"Es un fertilizante foliar de última tecnología formulado específicamente para la nutrición de cultivos intensivos y extensivos. NUTRI PLUS ZINC proporciona en su formulación liquida ZINC complementado con macro nutrientes y micronutrientes quelatizados en forma balanceada y efectiva.",
+        "Icono":"AKO_LogotipoFertilizantes-98-10-1024x432.png",
+        "Ficha":"NUTRI-PLUS-ZINC-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Nutri Plus",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. Bio Estimulante de Amplio Espectro Nutricional – Sanitario",
+        "Icono":"AKO_LogotipoFertilizantes-98-20-1024x432.png",
+        "Ficha":"NUTRI-PLUS-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Sulfa Max",
+        "Descripcion":"Activador fisiológico, penetrante y secuestrante. Es una formulación de Sulfato de Amonio líquido (40%) recomendado para acompañar herbicidas por su acción activadora.",
+        "Icono":"AKO_LogotipoFertilizantes-98-16-1024x432.png",
+        "Ficha":"SULFA-MAX-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Zinc Max",
+        "Descripcion":"Es un fertilizante líquido para uso foliar y fertirrigación. Es un fertilizante líquido que contiene 7.5% de zinc totalmente soluble,quelatado de disponibilidad inmediata y eficiente.",
+        "Icono":"AKO_LogotipoFertilizantes-98-22-1024x432.png",
+        "Ficha":"ZINC-MAX-SEMILLA-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Super Zinc",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-17-1024x432.png",
+        "Ficha":"SUPER-ZINC-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Fosfito Plus Mn-Cu",
+        "Descripcion":"FERTILIZANTE PARA USO FOLIAR Y FERTIRRIGACIÓN. Fosfito Plus activa las defensas naturales del cultivo para afrontar y superar con éxito las condiciones de estrés que van sucediendo durante los distintos momentos de crecimiento y desarrollo. Se trata de una herramienta agronómica muy versátil, diseñada para ser utilizada en cualquier estado fenológico como acompañante y complemento de los tratamientos fitosanitarios. La formulación y propiedades antifúngicas de Fosfito Plus, hacen perfecta su utilización en forma preventiva para potenciar los tratamientos sanitarios, reduciendo la severidad de enfermedades e incrementando los rendimientos. ",
+        "Icono":"AKO_LogotipoFertilizantes-98-33-1024x432.png",
+        "Ficha":"FOSFITO-PLUS-MN-CU-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Super Zinc Flow",
+        "Descripcion":"Zinc 70% ",
+        "Icono":"AKO_LogotipoFertilizantes-98-18-1024x432.png",
+        "Ficha":"",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Potasio Plus",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-34-1024x432.png",
+        "Ficha":"POTASIO-PLUS-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Ako BORO",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-36-1024x432.png",
+        "Ficha":"BORO-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Super Zinc Seed",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-31-1024x432.png",
+        "Ficha":"SUPER-ZINC-SEED-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Zinc Max Semilla",
+        "Descripcion":"Tratamientos de semillas. Zinc 21% (ZnO)",
+        "Icono":"AKO_LogotipoFertilizantes-98-32-1024x432.png",
+        "Ficha":"ZINC-MAX-SEMILLA-F.T.-1.pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Hierro Plus",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-13-1024x432.png",
+        "Ficha":"HIERRO-PLUS-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Magnesio Plus",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-14-1024x432.png",
+        "Ficha":"MAGNESIO-PLUS-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Manganeso Plus",
+        "Descripcion":"Fertilizante para uso foliar y fertirrigación. La fertilización foliar es considerada una de las estrategias más eficientes en la aplicación de nutrientes esenciales en diferentes cultivos. La fertilización foliar adecuada es una técnica de nutrición instantánea, que aporta elementos esenciales a los cultivos, mediante la pulverización de soluciones diluidas aplicadas directamente sobre las hojas.",
+        "Icono":"AKO_LogotipoFertilizantes-98-35-1024x432.png",
+        "Ficha":"MANGANESO-PLUS-F.T..pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Cobre Plus",
+        "Descripcion":"Cobre 5 % manganeso 7 %",
+        "Icono":"AKO_LogotipoFertilizantes-98-12-1024x432.png",
+        "Ficha":"",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Keep Control",
+        "Descripcion":"Fertilizante Foliar y Bioestimulante. Garantiza el éxito de los tratamientos fitosanitarios. Actúa como potenciador de la acción de herbicidas, insecticidas y fungicidas a los que acompaña. Se encuentra especialmente diseñado para acelerar la penetración y translocación de los herbicidas hacia los distintos sitios de acción, por lo cual resulta la mejor opción para acompañar graminicidas y latifolicidas de acción selectiva.",
+        "Icono":"AKO_LogotipoFertilizantes-98-30-1024x432.png",
+        "Ficha":"KEEPCONTROL_ft.pdf",
+        "Tipo":"fertilizantes"
+    },
+    {
+        "Nombre":"Nutri Fort Plus",
+        "Descripcion":"Es un fertilizante foliar de última tecnología formulado específicamente para la nutrición de cultivos intensivos y extensivos. Proporciona en su formulación liquida macro nutrientes y micronutrientes que latizados en forma balanceada y efectiva. Contiene nitrógeno, fósforo, y potasio. Aporta macro y micronutrientes en distintos cultivos. Incrementa la producción, mejorando la calidad.",
+        "Icono":"AKO_LogotipoFertilizantes-42-1024x432.png",
+        "Ficha":"KEEPCONTROL_ft.pdf",
+        "Tipo":"fertilizantes"
+    }
+    
+    ]
+}
