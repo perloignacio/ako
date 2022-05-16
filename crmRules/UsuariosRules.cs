@@ -9,7 +9,7 @@ namespace crmRules
 {
     public static class UsuariosRules
     {
-        public static void Agregar(string nombre, string apellido, string email,string telefono, string usuario, string contra, int idtipo)
+        public static void Agregar(string nombre, string apellido, string email,string telefono, string usuario, string contra, int idtipo,int? idcontacto)
         {
             validar(nombre, apellido, email, usuario, contra, idtipo, "Agregar");
             ContactoUsuarios u = new ContactoUsuarios();
@@ -21,6 +21,15 @@ namespace crmRules
             u.Nombre = nombre;
             u.IdTipoUsuario = idtipo;
             u.Usuario = usuario;
+            if (idcontacto.HasValue)
+            {
+                if (ContactosMapper.Instance().GetOne(idcontacto.Value) == null)
+                {
+                    throw new Exception("No se encuentra el contacto");
+                }
+                u.IdContacto = idcontacto.Value;
+            }
+            
             ContactoUsuariosMapper.Instance().Insert(u);
             
         }

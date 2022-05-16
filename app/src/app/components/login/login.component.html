@@ -1,7 +1,7 @@
 
 <div class="card" >
     <h3>Ingrese sus datos</h3>
-    <div class="ingreso">
+    <div class="ingreso" *ngIf="this.ingreso">
         <div class="row">
             <div class="col-md-12">
                 <div class="campo grande">
@@ -18,8 +18,63 @@
                 </div>
             </div>
         </div>
+        <button class="btn btn-primary" (click)="Ingresar()" role="button">Ingresar</button>
+        <button class="btn btn-success ms-2" (click)="ingreso=!ingreso" role="button">Registrar</button>
     </div>
-    <button class="btn btnceleste" (click)="Ingresar()" role="button">Ingresar</button>
+    <div class="ingreso" *ngIf="!this.ingreso">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="campo grande">
+                    <label>Nombre</label>
+                    <input type="text" [(ngModel)]="c.Nombre" class="form-control mb-3">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="campo grande">
+                    <label>Apellido</label>
+                    <input type="text" [(ngModel)]="c.Apellido" class="form-control mb-3">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="campo grande">
+                    <label>Email</label>
+                    <input type="text" [(ngModel)]="c.Email" class="form-control mb-3">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="campo grande">
+                    <label>Telefono</label>
+                    <input type="text" [(ngModel)]="c.Telefono" class="form-control mb-3">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="campo grande">
+                    <label>Usuario</label>
+                    <input type="text" [(ngModel)]="usuario" class="form-control mb-3">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="campo grande">
+                    <label>Contraseña</label>
+                    <input type="password" [(ngModel)]="contra" class="form-control mb-3">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" (click)="Registrar()" role="button">Registrar</button>
+        <button class="btn btn-success ms-2" (click)="ingreso=!ingreso" role="button">Ingresar</button>
+    </div>
+    
+    
 </div>
       
     

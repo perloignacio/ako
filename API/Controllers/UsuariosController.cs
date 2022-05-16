@@ -44,6 +44,28 @@ namespace API.Controllers
 
         }
 
+        [Route("registrar")]
+        [HttpPost]
+        [AllowAnonymous]
+        public IHttpActionResult registrar()
+        {
+            try
+            {
+                ContactoUsuarios usuario = JsonConvert.DeserializeObject<ContactoUsuarios>(HttpContext.Current.Request.Unvalidated["usuario"]);
+                Contactos contacto = JsonConvert.DeserializeObject<Contactos>(HttpContext.Current.Request.Unvalidated["contacto"]);
+                int idContacto=ContactosRules.Agregar(contacto.Nombre, contacto.Apellido, "", "", contacto.Telefono, contacto.Email, "", "", "", null, contacto.Telefono, "", "", "", "", 4);
+                UsuariosRules.Agregar(usuario.Nombre,usuario.Apellido,usuario.Email,usuario.Telefono,usuario.Usuario,usuario.Contra,usuario.IdTipoUsuario,idContacto);
+
+                return Ok(true);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+        }
+
         [Route("checktoken")]
         [HttpGet]
         
@@ -169,7 +191,7 @@ namespace API.Controllers
                 }
                 else
                 {
-                    UsuariosRules.Agregar(obj.Nombre, obj.Apellido, obj.Email, obj.Telefono, obj.Usuario, obj.Contra, obj.IdTipoUsuario);
+                    UsuariosRules.Agregar(obj.Nombre, obj.Apellido, obj.Email, obj.Telefono, obj.Usuario, obj.Contra, obj.IdTipoUsuario,null);
                 }
 
 
