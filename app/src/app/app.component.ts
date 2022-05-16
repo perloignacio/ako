@@ -62,4 +62,6 @@ export class AppComponent {
     this.loading=true;
     this.resultadofinal=false;
   }
+
+  
 }
