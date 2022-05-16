@@ -1,3 +1,38 @@
 <div class="card">
-    
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel title="Coadyuvantes">
+          <ng-template ngbPanelContent>
+            <div class="container mt-5">
+  
+                <div class="card" style="width: 18rem;" *ngFor="let producto of Coadyuvantes">
+                    <img src="assets/productos/{{producto.Icono}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ producto.Nombre }}</h5>
+                      <p class="card-text">{{ producto.Descripcion }}</p>
+                      <a href="assets/productos/fichas/{{ producto.Ficha }}" target="_blank" class="btn btn-primary">Descargar Ficha</a>
+                    </div>
+                  </div>            
+               </div>
+
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel title="Fertilizantes">
+        <ng-template ngbPanelContent>
+            <div class="container mt-5">
+  
+                <div class="card" style="width: 18rem;" *ngFor="let producto of Fertilizantes">
+                    <img src="assets/productos/{{producto.Icono}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ producto.Nombre }}</h5>
+                      <p class="card-text">{{ producto.Descripcion }}</p>
+                      <a href="assets/productos/fichas/{{ producto.Ficha }}" target="_blank" class="btn btn-primary">Descargar Ficha</a>
+                    </div>
+                  </div>            
+               </div>           
+        </ng-template>
+      </ngb-panel>
+       
+      </ngb-accordion>
 </div>
+
+
