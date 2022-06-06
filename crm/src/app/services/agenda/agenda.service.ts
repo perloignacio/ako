@@ -18,7 +18,7 @@ export class AgendaService {
   }
 
   Borrar(id:number) {
-    return this.http.get<boolean>(this.endpoint+'Admin/Borrar?id='+id);
+    return this.http.get<boolean>(this.endpoint+'Borrar?id='+id);
   }
   
   AgregarEditar(form:any) {

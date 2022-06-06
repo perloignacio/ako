@@ -16,6 +16,16 @@ export class OrigenesService {
   tipos() {
     return this.http.get<Origenes[]>(this.endpoint+'tipos');
   }
+
+  todosAdmin() {
+    return this.http.get<Origenes[]>(this.endpoint+'todosAdmin');
+  }
   
+  Borrar(id:number) {
+    return this.http.get<boolean>(this.endpoint+'Borrar?id='+id);
+  }
+  Activar(id:number) {
+    return this.http.get<boolean>(this.endpoint+'Activar?id='+id);
+  }
 
 }

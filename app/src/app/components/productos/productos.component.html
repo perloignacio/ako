@@ -1,10 +1,11 @@
+<button class="btn btn-success mb-3" [routerLink]="['/home']"><< Volver</button>
 <div class="card">
     <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
         <ngb-panel title="Coadyuvantes">
           <ng-template ngbPanelContent>
             <div class="container mt-5">
   
-                <div class="card" style="width: 18rem;" *ngFor="let producto of Coadyuvantes">
+                <div class="card" *ngFor="let producto of Coadyuvantes">
                     <img src="assets/productos/{{producto.Icono}}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{ producto.Nombre }}</h5>
@@ -20,7 +21,7 @@
         <ng-template ngbPanelContent>
             <div class="container mt-5">
   
-                <div class="card" style="width: 18rem;" *ngFor="let producto of Fertilizantes">
+                <div class="card" *ngFor="let producto of Fertilizantes">
                     <img src="assets/productos/{{producto.Icono}}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{ producto.Nombre }}</h5>

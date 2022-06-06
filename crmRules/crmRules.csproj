@@ -81,6 +81,7 @@
     <Compile Include="AgendaRules.cs" />
     <Compile Include="ContactosRules.cs" />
     <Compile Include="Encriptar.cs" />
+    <Compile Include="OrigenesRules.cs" />
     <Compile Include="UsuariosRules.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

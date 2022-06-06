@@ -1,5 +1,5 @@
 
-      
+      <button class="btn btn-success mb-3" [routerLink]="['/home']"><< Volver</button>
       <div class="card" >
         <h3>Porcentaje de Inactivacion de Glifosato</h3>
         <div class="ingreso" *ngIf="this.ingrsoglif">
@@ -66,13 +66,13 @@
               <div class="col-6">
                 <div class="campo mb-3">
                     <label>Capacidad Total Pulverizador (Lts)</label>
-                    <input type="number" [(ngModel)]="corre.volumen" class="txt">
+                    <input type="number" [(ngModel)]="corre.volumen" class="form-control">
                 </div>
               </div>
               <div class="col-6">
                 <div class="campo mb-3">
                     <label>Litros por ha aplicados</label>
-                    <input type="number" [(ngModel)]="corre.litros" class="txt">
+                    <input type="number" [(ngModel)]="corre.litros" class="form-control">
                   </div>
               </div>
             </div>
@@ -80,19 +80,19 @@
                 <div class="col-6">
                     <div class="campo mb-3">
                         <label>Costo Eco Potent Plus</label>
-                        <input type="number" [(ngModel)]="corre.costoeco" class="txt">
+                        <input type="number" [(ngModel)]="corre.costoeco" class="form-control">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="campo mb-3">
                         <label>Cantidad Has establecimiento</label>
-                        <input type="number" [(ngModel)]="corre.hectareas" class="txt">
+                        <input type="number" [(ngModel)]="corre.hectareas" class="form-control">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="campo mb-3">
                         <label>Cantidad Aplicaciones</label>
-                        <input type="number" [(ngModel)]="corre.cantidad" class="txt">
+                        <input type="number" [(ngModel)]="corre.cantidad" class="form-control">
                     </div>
                 </div>
             </div>

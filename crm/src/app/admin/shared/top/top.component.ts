@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
 @Component({
   selector: 'app-top',
@@ -7,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopComponent implements OnInit {
   public isActive: any;
-  constructor() { }
-
+  constructor(private srvAut:AuthenticationService,private route:Router) { }
+  Salir(){
+    this.srvAut.logout();
+    this.route.navigate(["/login"])
+  }
   ngOnInit(): void {
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Contactos } from 'src/app/models/Contactos.model';
 import { ContactosService } from 'src/app/services/contactos/contactos.service';
 import { SharedService } from 'src/app/services/shared/shared.service';
@@ -20,17 +20,25 @@ export class ContactosListadoComponent implements OnInit {
   collectionSize = 0
   OriginalArr:Contactos[]=[];
   strFiltro="";
-  constructor(private srvObj:ContactosService,private srvShared:SharedService,private router:Router) {
+  constructor(private srvObj:ContactosService,private srvShared:SharedService,private router:Router,private route:ActivatedRoute) {
     this.srvShared.Contacto=null;
     this.cargar()
   }
 
   cargar(){
-    this.srvShared.ObjEdit=null;
-    this.srvObj.todosAdmin().subscribe((lista)=>{
-      this.OriginalArr=lista;
-      this.collectionSize=this.OriginalArr.length;
-      this.refreshData();
+    this.route.params.subscribe(val => {
+      this.srvShared.ObjEdit=null;
+      let mios:string=this.route.snapshot.params["accion"];
+      console.log(mios);
+      let b:boolean=false;
+      if(mios!=undefined){
+        b=true;
+      }
+      this.srvObj.todosAdmin(b).subscribe((lista)=>{
+        this.OriginalArr=lista;
+        this.collectionSize=this.OriginalArr.length;
+        this.refreshData();
+      })
     })
   }
   refreshData(){

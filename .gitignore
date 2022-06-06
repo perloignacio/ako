@@ -14,3 +14,5 @@ packages
 crm/keys.json
 .github/workflows/firebase-hosting-pull-request.yml
 app/.firebase
+API/Properties
+publish

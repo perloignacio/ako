@@ -36,7 +36,7 @@ export class AgendaFormComponent implements OnInit {
   Guardar(){
     const form=new FormData();
     if(!this.Agregar){
-      form.append("id",this.obj.IdContacto.toString());
+      form.append("id",this.obj.IdContactoAgenda.toString());
     }else{
       form.append("id","0");
     }

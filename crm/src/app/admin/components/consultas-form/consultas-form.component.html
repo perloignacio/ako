@@ -1,0 +1,118 @@
+<div class="modal-header">
+</div>
+<div class="modal-body">
+    <div class="ingreso">
+        <div class="row">
+            <div class="col-6">
+                <div class="campo mb-3">
+                    <label>Volumen de agua (Lt./ha.)</label>
+                    <input disabled="true" type="number" [(ngModel)]="glifo.volumen" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="campo mb-3">
+                    <label>Dureza (ppm)</label>
+                    <input disabled="true" type="number" [(ngModel)]="glifo.dureza" class="form-control">
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="campo mb-3">
+                    <label>Costo  Herbicida</label>
+                    <input disabled="true" type="number" [(ngModel)]="glifo.costo" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="campo mb-3">
+                    <label>Dosis por ha.</label>
+                    <input disabled="true" type="number" [(ngModel)]="glifo.dosis" class="form-control">
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="resultado text-center border">
+                    <h4>Porcentaje de inactivacion.</h4>
+                    <div class="valor">{{glifo.porinactivacion}}</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="resultado text-center border">
+                    <h4>valorizacion de inactivacion</h4>
+                    <div class="valor">{{glifo.valinactivacion | currency}}</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="resultado text-center border">
+                    <h4>Perdida Economica total por ha.</h4>
+                    <div class="valor">{{glifo.perdida | currency}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+              <div class="campo mb-3">
+                  <label>Capacidad Total Pulverizador (Lts)</label>
+                  <input type="number" [(ngModel)]="corre.volumen" class="form-control" disabled="true">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="campo mb-3">
+                  <label>Litros por ha aplicados</label>
+                  <input type="number" [(ngModel)]="corre.litros" class="form-control" disabled="true">
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-6">
+                  <div class="campo mb-3">
+                      <label>Costo Eco Potent Plus</label>
+                      <input type="number" [(ngModel)]="corre.costoeco" class="form-control" disabled="true">
+                  </div>
+              </div>
+              <div class="col-6">
+                  <div class="campo mb-3">
+                      <label>Cantidad Has establecimiento</label>
+                      <input type="number" [(ngModel)]="corre.hectareas" class="form-control" disabled="true">
+                  </div>
+              </div>
+              <div class="col-6">
+                  <div class="campo mb-3">
+                      <label>Cantidad Aplicaciones</label>
+                      <input type="number" [(ngModel)]="corre.cantidad" class="form-control" disabled="true">
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <div class="resultado text-center border">
+                    <h4>Cantidad de hectareas</h4>
+                    <div class="valor">{{corre.canthec}}</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="resultado text-center border">
+                    <h4>Costo Final por hectareas </h4>
+                    <div class="valor">{{corre.costohec | currency}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+                <div class="resultado verde text-center border">
+                    <h4>Costo Total Establecimiento</h4>
+                    <div class="valor">{{totalesta | currency}}</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="resultado verde text-center border">
+                    <h4>Costo Total Aplicacion AKO</h4>
+                    <div class="valor">{{totalako | currency}}</div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

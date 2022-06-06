@@ -21,6 +21,9 @@ export class LoginComponent implements OnInit {
       if(u!=null){
         if(u.IdTipoUsuario==1 || u.IdTipoUsuario==2){
           this.router.navigate(['/admin/dashboard']);
+        }else{
+          u=null;
+          Swal.fire("Upps","Usuario / contraseña incorrectos",'warning');
         }
 
       }

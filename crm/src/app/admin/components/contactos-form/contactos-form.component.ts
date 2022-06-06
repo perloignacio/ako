@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { Acciones } from 'src/app/models/Acciones.model';
 import { Asignaciones } from 'src/app/models/Asignaciones.model';
 import { Contactos } from 'src/app/models/Contactos.model';
+import { correccion } from 'src/app/models/correcion.model';
 import { Direcciones } from 'src/app/models/Direcciones.model';
 import { Estados } from 'src/app/models/Estados.model';
+import { glifosato } from 'src/app/models/glifosato.mode';
 import { ContactosHistorialEstado } from 'src/app/models/HistorialEstado.model';
+import { home } from 'src/app/models/Home.model';
 import { Origenes } from 'src/app/models/Origenes.model';
 import { ContactosService } from 'src/app/services/contactos/contactos.service';
 import { OrigenesService } from 'src/app/services/origenes/origenes.service';
@@ -15,6 +19,7 @@ import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
 import { AccionesFormComponent } from '../acciones-form/acciones-form.component';
 import { AsignacionesFormComponent } from '../asignaciones-form/asignaciones-form.component';
+import { ConsultasFormComponent } from '../consultas-form/consultas-form.component';
 import { DireccionesFormComponent } from '../direcciones-form/direcciones-form.component';
 import { EstadosFormComponent } from '../estados-form/estados-form.component';
 
@@ -42,6 +47,32 @@ export class ContactosFormComponent implements OnInit {
         this.Acciones=this.obj.Acciones;
         this.Asignaciones=this.obj.Asignaciones;
         this.Estados=this.obj.Estados;
+        this.obj.Home=[];
+        this.obj.Consultas.forEach((c)=>{
+          let h=new home();
+          
+          h.fecha=c.Fecha;
+          h.glifosato=new glifosato();
+          h.glifosato.volumen=c.Gli_volumen
+          h.glifosato.dureza=c.Gli_dureza
+          h.glifosato.costo=c.Gli_costo
+          h.glifosato.dosis=c.Gli_dosis
+          h.glifosato.porinactivacion=c.Gli_porinactivacion
+          h.glifosato.valinactivacion=c.Gli_valinactivacion
+          h.glifosato.perdida=c.Gli_perdida
+          h.glifosato.villaseca=c.Gli_villaseca
+          h.correccion=new correccion();
+          h.correccion.volumen=c.Corr_volumen
+          h.correccion.litros=c.Corr_litros
+          h.correccion.cantidad=c.Corr_cantidad
+          h.correccion.costoeco=c.Corr_costoeco
+          h.correccion.hectareas=c.Corr_hectareas
+          h.correccion.canthec=c.Corr_canthec
+          h.correccion.costohec=c.Corr_costohec
+          h.totalesta=c.totalesta
+          h.totalako=c.totalako
+          this.obj.Home.push(h);
+        })
       }else{
         this.obj=new Contactos();
       }
@@ -93,6 +124,16 @@ export class ContactosFormComponent implements OnInit {
       }
       
      } 
+    });
+  }
+
+  AbrirConsulta(objHome:home){
+    this.srvShared.objModal=null;
+    if(objHome!=null){
+      this.srvShared.objModal=objHome;
+    }
+    this.modalService.open(ConsultasFormComponent, {size:'lg'}).result.then((result) => {
+     
     });
   }
 

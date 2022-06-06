@@ -1,5 +1,5 @@
 export class Origenes{
-    IdOrigen:Number;
+    IdOrigen:number;
     Nombre:string;
     Activo:boolean;
 }

@@ -11,12 +11,14 @@ import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
   styleUrls: ['./asignaciones-form.component.scss']
 })
 export class AsignacionesFormComponent implements OnInit {
+  editar:boolean=false;
   Usuarios:Usuario[]=[];
   obj:Asignaciones=new Asignaciones();
   constructor(private activeModal:NgbActiveModal,private srvUsuarios:UsuariosService,private srvShared:SharedService) {
     this.srvUsuarios.activos().subscribe((l)=>{
       if(this.srvShared.objModal as Asignaciones!=null){
         this.obj=this.srvShared.objModal;
+        this.editar=true;
       }
       this.Usuarios=l;
     })
@@ -26,7 +28,9 @@ export class AsignacionesFormComponent implements OnInit {
   }
   Guardar(){
     
-    
+    if(!this.editar){
+      this.obj.Fecha=new Date();
+    }
     this.obj.ContactoUsuariosEntity=this.Usuarios.find((u)=>u.IdUsuario==this.obj.IdUsuarioContacto);
     this.activeModal.close(this.obj);
   }

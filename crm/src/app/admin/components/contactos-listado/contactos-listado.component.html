@@ -35,12 +35,15 @@
         <thead>
         <tr>
           <th class="text-center">#</th>
+          <th>Fecha</th>
           <th>Apellido</th>
           <th>Nombre</th>
           
           <th>Email</th>
           <th>Teléfono</th>
           <th>Whatsapp</th>
+          <th>Asignado</th>
+          <th>Estado</th>
           <th class="text-center">Activo</th>
           <th class="text-center">Acciones</th>
         </tr>
@@ -49,12 +52,14 @@
   
         <tr *ngFor="let obj of ArrObj;">
           <td class="text-center text-muted">#{{obj.IdContacto}}</td>
+          <td>{{obj.FechaRegistro | date:'dd/MM/yyyy'}}</td>
           <td>{{obj.Apellido}}</td>
           <td>{{obj.Nombre}}</td>
-          
           <td>{{obj.Email}}</td>
           <td>{{obj.Telefono}}</td>
           <td><a href="https://wa.me/{{obj.Whatsapp}}" target="_blank">{{obj.Whatsapp}}</a></td>
+          <td>{{obj.Asignaciones.length>0 ? obj.Asignaciones[obj.Asignaciones.length-1].ContactoUsuariosEntity.Apellido:"-"}}</td>
+          <td>{{obj.Estados.length>0 ? obj.Estados[obj.Estados.length-1].ContactosEstadosEntity.Nombre:"-"}}</td>
           <td class="text-center">{{obj.Activo ? 'Si':'NO'}}</td>
           <td class="text-center">
   

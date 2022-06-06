@@ -22,6 +22,9 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { AgendaListadoComponent } from './components/agenda-listado/agenda-listado.component';
 import { UsuariosListadoComponent } from './components/usuarios-listado/usuarios-listado.component';
 import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.component';
+import { ConsultasFormComponent } from './components/consultas-form/consultas-form.component';
+import { OrigenListadoComponent } from './components/origen-listado/origen-listado.component';
+import { OrigenFormComponent } from './components/origen-form/origen-form.component';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.
     AgendaListadoComponent,
     UsuariosListadoComponent,
     UsuariosFormComponent,
+    ConsultasFormComponent,
+    OrigenListadoComponent,
+    OrigenFormComponent,
   ],
   exports:[
     MainComponent
@@ -58,7 +64,7 @@ import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.
       useFactory: adapterFactory,
     }),
     AgmCoreModule.forRoot({
-      apiKey: 'xxx',
+      apiKey: 'AIzaSyCg8BmxqFCCKSEdoT7JQXXM5zDHqrIkx0g',
       libraries: ['places']
     })
   ],providers:[

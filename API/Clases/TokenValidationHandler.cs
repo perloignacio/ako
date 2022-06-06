@@ -11,6 +11,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Net;
+using crmRules.Entities;
+using crmRules.Mappers;
 
 namespace API.Clases
 {
@@ -120,13 +122,13 @@ namespace API.Clases
 
                     // Extract and assign Current Principal and user
                     System.Security.Claims.ClaimsPrincipal iden = tokenHandler.ValidateToken(token, validationParameters, out securityToken);
-                    /*var identity = iden.Identity;
-                    if (request.RequestUri.ToString().Contains("admin/"))
+                    var identity = iden.Identity;
+                    if (request.RequestUri.ToString().Contains("Admin/"))
                     {
-                        Usuarios u = UsuariosMapper.Instance().GetOne(Convert.ToInt32(identity.Name));
+                        ContactoUsuarios  u = ContactoUsuariosMapper.Instance().GetOne(Convert.ToInt32(identity.Name));
                         if (u != null)
                         {
-                            if (u.Tipo != "A")
+                            if (u.IdTipoUsuario != 1 && u.IdTipoUsuario!=2)
                             {
                                 ret = false;
                             }
@@ -136,14 +138,14 @@ namespace API.Clases
                             ret = false;
                         }
 
-                    }*/
+                    }
 
 
                     // Extract and assign Current Principal and user
                     Thread.CurrentPrincipal = tokenHandler.ValidateToken(token, validationParameters, out securityToken);
                     HttpContext.Current.User = tokenHandler.ValidateToken(token, validationParameters, out securityToken);
 
-                    ret = true;
+                    
                 }
 
                 return ret;

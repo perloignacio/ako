@@ -13,8 +13,8 @@ export class ContactosService {
     this.endpoint = environment.apiUrl+"contactos/Admin/";
   }
 
-  todosAdmin() {
-    return this.http.get<Contactos[]>(this.endpoint+'todosAdmin');
+  todosAdmin(b:boolean) {
+    return this.http.get<Contactos[]>(this.endpoint+'todosAdmin?mios='+b);
   }
   todoActivos() {
     return this.http.get<Contactos[]>(this.endpoint+'todosActivos');

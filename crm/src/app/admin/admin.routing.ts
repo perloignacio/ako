@@ -5,6 +5,7 @@ import { ContactosFormComponent } from './components/contactos-form/contactos-fo
 import { ContactosListadoComponent } from './components/contactos-listado/contactos-listado.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MainComponent } from './components/main/main.component';
+import { OrigenListadoComponent } from './components/origen-listado/origen-listado.component';
 import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.component';
 import { UsuariosListadoComponent } from './components/usuarios-listado/usuarios-listado.component';
 
@@ -22,6 +23,10 @@ const routes: Routes = [
         component: ContactosListadoComponent,
       },
       {
+        path: 'contactos/:accion',
+        component: ContactosListadoComponent,
+      },
+      {
         path: 'contactosForm',
         component: ContactosFormComponent,
       },
@@ -36,6 +41,14 @@ const routes: Routes = [
       {
         path: 'usuariosForm',
         component: UsuariosFormComponent,
+      },
+      {
+        path: 'origenes',
+        component: OrigenListadoComponent,
+      },
+      {
+        path: 'origenesForm',
+        component: OrigenListadoComponent,
       },
 
     ]

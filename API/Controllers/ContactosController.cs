@@ -10,6 +10,7 @@ using crmRules;
 using API.Clases;
 using System.Web;
 using Newtonsoft.Json;
+using System.Threading;
 
 namespace API.Controllers
 {
@@ -19,17 +20,30 @@ namespace API.Controllers
         [Route("Admin/todosAdmin")]
         [HttpGet]
         
-        public IHttpActionResult todosAdmin()
+        public IHttpActionResult todosAdmin(bool mios)
         {
             try
             {
-                ContactosList lista = ContactosMapper.Instance().GetAll();
+                ContactosList lista;
+                if (mios)
+                {
+
+                    var identity = Thread.CurrentPrincipal.Identity;
+                    lista = ContactosMapper.Instance().GetMios(Convert.ToInt32(identity.Name));
+                }
+                else
+                {
+                    lista = ContactosMapper.Instance().GetAll();
+                }
+                
                 foreach (var item in lista)
                 {
+                   
                     item.Acciones = ContactoHistorialAciconesMapper.Instance().GetByContactos(item.IdContacto);
                     item.Direcciones = ContactosDireccionesMapper.Instance().GetByContactos(item.IdContacto);
                     item.Estados = ContactosHistorialEstadoMapper.Instance().GetByContactos(item.IdContacto);
                     item.Asignaciones = ContactosHistorialAsignacionesMapper.Instance().GetByContactos(item.IdContacto);
+                    item.Consultas = ContactosConsultasMapper.Instance().GetByContactos(item.IdContacto).OrderBy(c => c.Fecha).ToList();
                 }
                 return Ok(lista);
             }
@@ -123,8 +137,17 @@ namespace API.Controllers
                 List<ContactosHistorialAsignaciones> asignaciones = JsonConvert.DeserializeObject<List<ContactosHistorialAsignaciones>>(HttpContext.Current.Request.Unvalidated["asignaciones"]);
 
                 int id = JsonConvert.DeserializeObject<int>(HttpContext.Current.Request.Unvalidated["id"]);
-
-
+                var identity = Thread.CurrentPrincipal.Identity;
+                foreach (var item in acciones)
+                {
+                    item.IdUsuario = Convert.ToInt32(identity.Name);
+                }
+                foreach (var item in estados)
+                {
+                    item.IdUsuarioContacto = Convert.ToInt32(identity.Name);
+                }
+               
+                
                 if (id != 0)
                 {
                     ContactosRules.Modificar(id,obj.Nombre,obj.Apellido,obj.Dni,obj.Cuit,obj.Telefono,obj.Email,obj.EstadoCivil,obj.Profesion,obj.Actividad,obj.FechaNacimiento,obj.Whatsapp,obj.Empresa,obj.Facebook,obj.Linkedin,obj.Linkedin,obj.IdOrigen);

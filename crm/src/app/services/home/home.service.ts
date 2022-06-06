@@ -9,7 +9,7 @@ export class HomeService {
 
   endpoint = "";
   constructor(private http: HttpClient) {
-    this.endpoint = environment.apiUrl+"Home/Admin";
+    this.endpoint = environment.apiUrl+"Home/";
   }
 
   enviar(obj:any) {

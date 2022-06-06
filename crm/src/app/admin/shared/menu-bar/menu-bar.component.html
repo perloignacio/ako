@@ -25,7 +25,7 @@
               </a>
             </div>
             <div class="vsm-item">
-              <a [routerLink]="'equipos'" routerLinkActive="active-item"[routerLinkActiveOptions]="{exact: true}" class="vsm-link">
+              <a [routerLink]="'contactos/mios'" routerLinkActive="active-item"[routerLinkActiveOptions]="{exact: true}" class="vsm-link">
                 <i class="vsm-icon pe-7s-browser"></i>
                 <span class="vsm-title">Mis Contactos</span>
               </a>
@@ -37,12 +37,17 @@
               </a>
             </div>
             <div class="vsm-item">
-              <a [routerLink]="'usuarios'" routerLinkActive="active-item"[routerLinkActiveOptions]="{exact: true}" class="vsm-link">
+              <a [routerLink]="'usuarios'" *ngIf="this.srvAut.currentUserValue.IdTipoUsuario==1" routerLinkActive="active-item"[routerLinkActiveOptions]="{exact: true}" class="vsm-link">
                 <i class="vsm-icon pe-7s-browser"></i>
                 <span class="vsm-title">Usuarios</span>
               </a>
             </div>
-            
+            <div class="vsm-item">
+              <a [routerLink]="'origenes'" *ngIf="this.srvAut.currentUserValue.IdTipoUsuario==1" routerLinkActive="active-item"[routerLinkActiveOptions]="{exact: true}" class="vsm-link">
+                <i class="vsm-icon pe-7s-browser"></i>
+                <span class="vsm-title">Origenes</span>
+              </a>
+            </div>
             
           </div>
          

@@ -19,7 +19,7 @@ namespace API.Controllers
     [RoutePrefix("Home")]
     public class HomeController : ApiController
     {
-        [Route("Admin/Enviar")]
+        [Route("Enviar")]
         [HttpPost]
         [AllowAnonymous]
         public IHttpActionResult Enviar()
